@@ -4,7 +4,7 @@ clear all; clc; close all;
 BaseFolder = "C:\Users\admin\Desktop\ARTH SHAH\Emotion Challange Dataset\Dataset\Audios";
 
 % Define the target folders for train, test, and val
-Folders = {'Train','Test', 'Val'};%{'arabic','english', 'french','hindi','mandarin_chinese','portugese','russian','sanskarit','spanish','vitnamese'};
+Folders = {'Train','Test', 'Val'};
 % Loop through the folders (train, test, val)
 for folderIndex = 1:numel(Folders)
     Folder = fullfile(BaseFolder, Folders{folderIndex});
