@@ -28,7 +28,9 @@ for folderIndex = 1:numel(Folders)
             File = fullfile(Subfolder, FileList(iFile).name);
             [y, fs] = audioread(File);
             [filepath, name, ext] = fileparts(File);
-            res = LP_residual_extraction(y, fs);
+            % change LP order here
+            p=4;
+            res = LP_residual_extraction(p,y, fs);
             Window_Length = 25;
             NFFT = 512;
             No_Filter = 40;
